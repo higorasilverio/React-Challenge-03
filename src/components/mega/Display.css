@@ -1,3 +1,19 @@
-.Number {
+.Display{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 5px;
+    border-top: 2px dashed blue;
+    border-bottom: 2px dashed blue;
+    min-height: 7vh;
+}
+
+.Display .Number {
     display: inline;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 2vw;
+    letter-spacing: 2px;
+    color: rgb(44, 180, 44);
 }

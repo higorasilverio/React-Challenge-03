@@ -1,0 +1,11 @@
+.GenerateButton button{
+    text-align: center;
+    padding: 5px 3vw 7px 3vw;
+    margin: 10px;
+    border-radius: 10px;
+    font: 400 1.1rem 'New Tegomin';
+    background-color: #4D6AFF;
+    color: #fff;
+    border-color: #fff;
+    letter-spacing: 1px;
+}

@@ -1,8 +1,10 @@
 import React from "react";
 
+import "./GenerateButton.css"
+
 const GenerateButton = (props) => {
   return (
-    <div>
+    <div className="GenerateButton">
       <button onClick={props.generateRandomNumbers}>Generate</button>
     </div>
   );

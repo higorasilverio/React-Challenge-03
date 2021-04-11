@@ -1,0 +1,12 @@
+.InputForm .Label {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.InputForm .Input input{
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    font: 600 1.1rem 'New Tegomin';
+}

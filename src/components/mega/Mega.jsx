@@ -12,6 +12,22 @@ class Mega extends React.Component {
     randomArray: [],
   };
 
+  generateNonContiguous(min, max, array) {
+    const random = parseInt(Math.random() * ((max + 1) - min)) + min;
+    return array.includes(random) ? this.generateNonContiguous(min, max, array) : random;
+  }
+
+  generateNumbers(quantity){
+    const numbers = Array(quantity)
+    .fill(0)
+    .reduce((array) => {
+      const newNumber = this.generateNonContiguous(1, 60, array)
+      return [ ...array, newNumber ]
+    }, [])
+    .sort((n1, n2) => n1-n2)
+    return numbers
+  }
+
   setElementsNumber = (newValue) => {
     this.setState({
       number: newValue,
@@ -20,11 +36,10 @@ class Mega extends React.Component {
 
   generateRandomNumbers = () => {
     this.setState({
-      randomArray: Array.from(Array(this.state.number)).map(() =>
-        Math.ceil(Math.random() * 60)
-      ),
+      randomArray: this.generateNumbers(this.state.number)
     });
   };
+
 
   render() {
     return (

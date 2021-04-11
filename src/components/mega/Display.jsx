@@ -11,9 +11,9 @@ const Display = (props) => {
     )
   });
   return (
-    <>
+    <div className="Display">
         {numbers}
-    </>
+    </div>
   );
 };
 
